@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecionando...</title>
+    <script>
+      window.onload = function () {
+        const deeplink = "blackbook://app/routines/60e2f1d483b76be457cad258/60797b9679f6b4424a715c23/67b5d8b95f8eaa9b27244e96";
+        const fallback = "https://play.google.com/store/apps/details?id=br.com.blackbook";
+
+        // Tenta abrir o app
+        window.location = deeplink;
+
+        // Depois de 2 segundos, redireciona para a loja se o app não abrir
+        setTimeout(() => {
+          window.location = fallback;
+        }, 2000);
+      };
+    </script>
+  </head>
+  <body>
+    <h2>Redirecionando para o app...</h2>
+    <p>Se nada acontecer, você será redirecionado para a loja.</p>
+  </body>
+</html>
